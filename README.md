@@ -48,4 +48,5 @@ Better Practices:
             npm run dev
 
             Server File is under 'src'-> 'index.js'
-            *should not be operational, as all environmental variables are stored on the server.
+            
+            *Not operational, as all environmental variables are stored on the server.
