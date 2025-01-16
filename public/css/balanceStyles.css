@@ -1,0 +1,423 @@
+/*---------------------------------------------------------------------------------------------*/
+/* Custom Fonts Roboto and Familiar*/
+@font-face{
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: Familiar;
+    src: url(../fonts/Familiar_Pro-Bold.woff);
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/* Home Main Quadrant Attributes*/
+/*---------------------------------------------------------------------------------------------*/
+/*Body Attributes*/
+body{
+    margin: 0;
+    font-family: Roboto;
+    font-size: 18px;
+    background-image: url('../img/homeBackground.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*Main Attributes*/
+main{
+    display:grid;
+    grid-template-columns: 1.5fr 1fr;
+}
+/*Header Attributes*/
+header{
+    display:grid;
+    grid-template-columns: 1.5fr 1fr;
+    min-height: 280px;
+}
+/*Footer Attributes*/
+footer{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+    margin: 0;
+    height: 200px;
+    background-color: #28282a;
+    font-size: 3em;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/*Main Class Grid Sub Grids*/
+/*---------------------------------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------------------------*/
+/*Welcome-Left Attributes*/
+.welcome-left{
+    height:100vh;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 0.3fr 1fr;
+    
+}
+/*---------------------------------------------------------------------------------------------*/
+/*Welcome-right Attributes*/
+.welcome-right{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+/*---------------------------------------------------------------------------------------------*/
+/*top-right Attributes inside welcome-right*/
+.top-right{
+    background-color: #28282a;
+    opacity: 75%;
+}
+/*---------------------------------------------------------------------------------------------*/
+/*bottom-right Attributes inside welcome-right*/
+.bottom-right{
+    background-color: #f49120;
+}
+/*---------------------------------------------------------------------------------------------*/
+/*feature Attributes inside bottom-right*/
+.feature{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/*Specific Class Attributes*/
+/*---------------------------------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------------------------*/
+/*Header Attributes*/
+header img{
+    width: 275px;
+    float: left;
+    position: relative;
+    top: 40px;
+    left: 75px;
+    z-index: 300;
+}
+
+
+/*---------------------------------------------------------------------------------------------*/
+/*Navigation Bar Attributes inside header*/
+.nav-bar{
+    background-color: #28282a;
+    opacity: 75%;
+}
+.navigation{
+    margin-left: 33%;
+    margin-top:75px;
+}
+.navigation ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.navigation ul li {
+    float: left;
+    position: relative;
+}
+.navigation ul li a {
+    display: block;
+    font-family: Familiar;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 5px 45px 14px 45px;
+    text-decoration: none;
+    white-space: nowrap;
+    color: #fff;
+}
+.navigation ul li a:hover {
+    color: #f49120;
+    font-weight: bold;
+    transition: color 500ms ease-in;
+}
+.navigation ul li ul {
+    display: none;
+}
+.navigation ul li ul a{
+    
+    font-family: Roboto;
+    font-size: 16px;
+}
+.navigation ul li:hover ul {
+    display: block;
+    right: 2;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/*Welcome Attributes inside welcome-left*/
+
+.style {
+    margin-left:70px;
+    margin-top: 120px;
+    border-radius: 10px;
+    width: 55px;
+    border: 2px solid #f49120;
+}
+
+.welcome-left h1{
+  margin-left: 70px;
+  margin-bottom: 90px;
+  font-family: Familiar;
+  font-weight: bold;
+  font-size: 36px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #28282a;
+}
+
+.welcome-left p{
+    margin-left: 70px;
+    font-family: Roboto;
+	font-size: 24px;
+	font-weight: bold;
+    max-width: 650px;
+	letter-spacing: 0.5px;
+    color: #28282a;
+	text-shadow: 1px 1px 5px, rgba(0, 0, 0, 0.8);	
+}
+
+.balanceForm img{
+    height: 50px;
+	width: 50px;
+	margin-left: 70px;
+	margin-top: 15px;
+}
+
+.balanceForm img:hover{
+    transition:all 0.4s ease;
+	-webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform: scale(1.15);
+}
+
+.balanceForm button{
+	display: block;
+	margin-left: 70px;
+	margin-top: 70px;
+	padding: 7.5px;
+	/* margin: 135px auto; */
+	font-family: Roboto;
+	text-align: center;
+	width: 175px;
+	color: #28282a;
+	font-weight: bold;
+	font-size: 20px;
+	text-decoration: none;
+	border-radius: 25px;
+	border: 5px solid #f49120;
+	text-shadow: 1px 1px 5px, rgba(0, 0, 0, 0.8);
+}
+
+.balanceForm button:hover {
+	/* background-color: #100A47;
+	border: 5px solid #4741C466; 
+	color: #4741C4; */
+	transition:all 0.4s ease;
+	-webkit-transform: scale(1.15);
+	-ms-transform: scale(1.15);
+	transform: scale(1.15);
+}
+
+
+/*---------------------------------------------------------------------------------------------*/
+/*Feature Block Attributes*/
+/*---------------------------------------------------------------------------------------------*/
+.feature{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+}
+.feature-block {
+    background: transparent;
+}
+.feature-block a {
+    position: relative;
+    top:50%;
+    left:35%;
+    font-family: Familiar;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+.feature-block a:hover  {
+    color: #f49120;
+    font-weight: bold;
+    font-size: 22px;
+    transition:all 0.4s ease;
+}
+.feature-block:hover {
+    background-color: #28282a;
+    transition: background-color 500ms ease-in;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/*Footer Main Attributes*/
+/*---------------------------------------------------------------------------------------------*/
+
+/*Contact Grid Attributes*/
+.contact-us {
+    float: left;
+    width: 50%;
+    padding-left: 75px;
+    padding-top: 45px;
+}
+.contact-us h3 {
+    font-family: Familiar;
+    font-size: 16px;
+    color: #f49120;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 20px;
+}
+.contact-us p {
+    font-size: 16px;
+    font-family: Roboto;
+    color: #f49120;
+    letter-spacing: 0.5px;
+    margin: 0;	
+}
+
+/*Location Grid Attributes*/
+.locate-us {
+    float: left;
+    width: 50%;
+    padding-top: 45px;
+}
+.locate-us h3 {
+    font-family: Familiar;
+    font-size: 16px;
+    color: #f49120;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 20px;		
+}
+.locate-us p {
+    font-size: 16px;
+    font-family: Roboto;
+    color: #f49120;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/*Media Attributes -- For responsive Design*/
+/*---------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 1400px)
+{
+    .navigation{
+        margin-left: 18%;
+    }
+    header{
+        grid-template-columns: 1fr;
+    }
+    header img{
+        margin-bottom: 70px;
+    }
+    main{
+        grid-template-columns: 1fr;
+    }
+    .welcome-left{
+        height:700px;
+    }
+    .top-right{
+        background: transparent;
+    }
+    .feature{
+        height: 100px;
+    }
+
+    .locate-us h3, .contact-us h3{
+        font-size: 14px;
+
+    }
+    .locate-us p, .contact-us p{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 600px)
+{
+    .navigation{
+        margin-left: 2%;
+    }
+    .navigation ul li a {
+        font-size: 14px;
+        padding: 5px 35px 14px 30px;
+    }
+    .navigation ul li ul a{
+        font-size: 12px;
+    }
+    .style{
+        margin-left: 10px;
+    }
+    .welcome-left{
+        height: 680px;
+    }
+    .welcome-left h1{
+        margin-left: 10px;
+        font-size: 26px;
+        margin-bottom:50px;
+    }
+    .balanceForm{
+        height: 360px;
+    }
+    .welcome-left p{
+        margin-left: 10px;
+        font-size: 16px;
+        margin-top: 0;
+    }
+    .balanceTable img{
+        margin-left: 10px;
+    }
+    .welcome-left button{
+        margin-left: 10px;
+    }
+    .feature-block a{
+        font-size: 14px;
+        top: 30%;
+        left: 30%;
+    }
+    .feature-block a:hover{
+        font-size: 17px;
+    }
+    .top-right{
+        height: 25px;
+    }
+    .welcome-right{
+        height: 125px;
+    }
+    .contact-us{
+        padding: 45px 0 0 10px;
+    }
+    .contact-us h3{
+        font-size: 12px;
+    }
+    .contact-us p{
+        font-size: 10px;
+    }
+    .locate-us{
+        margin-left: 10px;   
+    }
+    .locate-us h3{
+        font-size: 12px;
+    }
+    .locate-us p{
+        font-size: 10px;
+    }
+}
+/*---------------------------------------------------------------------------------------------*/
+/*End of CSS balanceStyles.css*/
+/*---------------------------------------------------------------------------------------------*/
+
+
+
+
+

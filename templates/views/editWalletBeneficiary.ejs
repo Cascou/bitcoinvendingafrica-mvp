@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Bitcoin Vending Africa</title>
+        <meta name="keywords" content="html, BVA, Bitcoin, ATM, Bitcoin Vending Machine">
+        <link rel="stylesheet" type="text/css" href="css/editWalletBeneficiaryStyles.css">
+        <link rel="icon" href="/img/smallFav.jpg">
+		<script>
+			let myotherNumber = "<%= phoneNumber %>";
+			let myNumber =  myotherNumber.replace(/\+/g, '');
+		</script>
+    </head>
+
+    <body onload="GetBeneficiary()">
+        <header>
+            <div>
+                <a href="/home"><img src="/img/bvaLogo.svg"></a>
+            </div>
+
+            <div class="nav-bar">
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="https://bitcoinvendingafrica.com/about-us-2/">About</a></li>
+                        <li><a href="https://bitcoinvendingafrica.com/contact-us/">Contact</a></li>
+                        <li><a href="">Menu</a>
+                            <ul>
+								<a href="/dashboard">Dashboard</a>
+								<a href="/balance">Balance</a>
+                                <a href="/beneficiary">Beneficiary</a>
+								<a href="/buy">Buy</a>
+                                <a href="/sell">Sell</a>
+								<a href="/logout">Logout</a>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <main>
+            <div class="welcome-left">
+                <div>
+                    <hr class="style">
+
+                    <h1>Edit Beneficiary</h1>
+
+					<form class="editBeneficiaryForm">
+                        <table class="editBeneficiaryTable">
+                            <tr>
+                                <td>
+                                    <input autocomplete="off" class="inputName" type="text" placeholder="Beneficiary Name" name="beneficiaryName" required/>
+                                </td>
+                            </tr>
+                           <tr>
+                                <td>
+                                    <input autocomplete="off" class="inputAddress" type="text" placeholder="Beneficiary Address" name="beneficiaryAddress" required/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <select name="Currency" id="currencySelect">
+                                        <option value="BTC">Bitcoin</option>
+                                        <option value="USDT">USDT</option>
+                                    </select>
+                            </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button>Update</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="edit error"></div>
+                                </td>
+                            </tr>
+                        </table>
+					</form>
+				</div>
+			</div>
+
+			<div class="welcome-right" >
+                <div class="top-right">
+
+                </div>
+
+                <div class="bottom-right">
+                    <section class="feature">
+                       <div class="feature-block">
+                            <a href="/balance">Balance</a>			
+                        </div>
+
+                        <div class="feature-block">
+                            <a href="/beneficiary">Beneficiary</a>			
+                        </div>
+                    
+                        <div class="feature-block">
+                            <a href="/buy">Buy</a>			
+                        </div>
+
+                        <div class="feature-block">
+                            <a href="/sell">Sell</a>			
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </body>
+
+    <footer>
+        <div class="contact-us">
+            <h3>Contact Us</h3>
+            <p>
+                Tel: +27 67 303 6961
+            </p>
+            <p>
+                Website:  <a href="https://www.bitcoinvendingafrica.com" style="color: white;">https://www.bitcoinvendingafrica.com </a>
+            </p>
+            <p>
+                E-mail: support@bitcoinvendingafrica.com
+            </p>
+        </div>
+
+		<div class="locate-us">
+			<h3>Locate Us</h3>
+            <p>
+                South Africa, Johannesburg
+            </p>
+        </div>
+		<script src="/js/editWalletBeneficiary.js"></script>
+    </footer>
+</html>

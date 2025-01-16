@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Bitcoin Vending Africa</title>
+        <meta name="keywords" content="html, BVA, Bitcoin, ATM, Bitcoin Vending Machine">
+        <link rel="stylesheet" type="text/css" href="css/loginStyles.css">
+        <link rel="icon" href="/img/smallFav.jpg">
+    </head>
+
+    <body>
+        <header>
+            <div>
+                <a href="/home"><img src="/img/bvaLogo.svg"></a>
+            </div>
+
+            <div class="nav-bar">
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="https://bitcoinvendingafrica.com/about-us-2/">About</a></li>
+                        <li><a href="https://bitcoinvendingafrica.com/contact-us/">Contact</a></li>
+                        <li><a href="">Menu</a>
+                            <ul>
+                                <a href="/login"> Login</a>
+                                <a href="/register"> Register</a>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <main>
+            <div class="welcome-left">
+                <div>
+                    <hr class="style">
+                    <h1>Login</h1>
+                    <form class="loginForm">
+                        <table class="loginTable">
+                            <tr>
+                                <td>
+                                    <select name="country code" id="countryCode">
+                                        <option value="27">South Africa (+27)</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input class="inputNumber" type="number" placeholder="phone number" name="phoneNumber" required/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <div class="phone error"></div>
+                                </td>
+                            </tr>
+                             <tr>
+                                <td></td>
+                                <td> <input class="inputPassword" type="password" pattern="[0-9]*" inputmode="numeric"  placeholder="pin number" name="pinNumber" required/></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><div class="pin error" ></div></td>
+                            </tr>
+                            <tr>
+                                <td><button class="submit-button"> Login</button></td>
+                                <td><div class="login error"></div></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+			</div>
+
+			<div class="welcome-right" >
+                <div class="top-right">
+
+                </div>
+
+                <div class="bottom-right">
+
+                    <p>
+                        Don't have an account with us? Come Register
+                    </p>
+
+                    <a href="/register">Register</a>
+                </div>
+            </div>
+        </main>
+    </body>
+
+    <footer>
+        <div class="contact-us">
+            <h3>Contact Us</h3>
+			<p>
+				Tel: +27 67 303 6961
+			</p>
+            <p>
+                Website:  <a href="https://www.bitcoinvendingafrica.com" style="color: white;">https://www.bitcoinvendingafrica.com </a>
+            </p>
+            <p>
+                E-mail: support@bitcoinvendingafrica.com
+            </p>
+        </div>
+
+		<div class="locate-us">
+			<h3>Locate Us</h3>
+            <p>
+                South Africa, Johannesburg
+            </p>
+        </div>
+    </footer>
+    <script src="/js/login.js"></script>
+</html>
+    

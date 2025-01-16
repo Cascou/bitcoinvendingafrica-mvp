@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Bitcoin Vending Africa</title>
+        <meta name="keywords" content="html, BVA, Bitcoin, ATM, Bitcoin Vending Machine">
+        <link rel="stylesheet" type="text/css" href="css/beneficiaryStyles.css">
+        <link rel="icon" href="/img/smallFav.jpg">
+		<script>
+			let myotherNumber = "<%= phoneNumber %>";
+			let myNumber =  myotherNumber.replace(/\+/g, '');
+		</script>
+    </head>
+
+    <body>
+        <header>
+            <div>
+                <a href="/home"><img src="/img/bvaLogo.svg"></a>
+            </div>
+
+            <div class="nav-bar">
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="https://bitcoinvendingafrica.com/about-us-2/">About</a></li>
+                        <li><a href="https://bitcoinvendingafrica.com/contact-us/">Contact</a></li>
+                        <li><a href="">Menu</a>
+                            <ul>
+                                <a href="/dashboard">Dashboard</a>
+								<a href="/balance">Balance</a>
+                                <a href="/beneficiary">Beneficiary</a>
+								<a href="/buy">Buy</a>
+                                <a href="/sell">Sell</a>
+								<a href="/logout">Logout</a>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <main>
+            <div class="welcome-left">
+                <div>
+                    <hr class="style">
+
+                    <h1>Beneficiary</h1>
+
+					<form class="beneficiaryForm">
+                        <h2>Crypto Wallet Beneficiaries</h2>
+                        <a class="addLinks" href="/addWalletBeneficiary">Add Wallet Beneficiary</a>
+                        <table class="beneficiaryTable">
+                            <tr>
+                                <th>BeneficiaryName</th>
+                                <th>BeneficiaryAddress</th>
+                                <th>Currency</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                                <th>Send</th>
+                            </tr>
+                            
+                            <% if(walletData.length!=0){
+                                var i=1;
+                                walletData.data.forEach(function(data){
+                            %>
+                            <tr>
+                                <td><%=data.beneficiaryName %></td>
+                                <td><%=data.walletAddress %></td>
+                                <td><%=data.currency %></td>
+                                <td><a class="editWalletLink" data-beneficiary-id="<%=data.walletAddress%>" href="/editWalletBeneficiary">Edit</a></td>
+                                <td><a onclick="DeleteWalletBeneficiary('<%=data.beneficiaryID%>')">Delete</a></td>
+                                <td><a class="sendWalletLink" data-beneficiary-id="<%=data.walletAddress%>" href="/sendWalletBeneficiary">Send</a></td>
+                            </tr>
+                            <%  i++; }) %>
+                            <% } else{ %>
+                                <tr>
+                                    <td colspan="7">No Data Found</td>
+                                </tr>
+                            <% } %>
+                        </table>
+
+                        <h2>BVA Beneficiaries</h2>
+                        <a class="addLinks" href="/addMobileBeneficiary">Add BVA Beneficiary</a>
+                        <table class="beneficiaryTable">
+                            <tr>
+                                <th>BeneficiaryName</th>
+                                <th>BeneficiaryNumber</th>
+                                <th>Currency</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                                <th>Send</th>
+                            </tr>
+                            
+                            <% if(mobileData.length!=0){
+                                var i=1;
+                                mobileData.data.forEach(function(data){
+                            %>
+                            <tr>
+                                <td><%=data.beneficiaryName %></td>
+                                <td><%=data.mobileAddress %></td>
+                                <td><%=data.currency %></td>
+                                <td><a class="editMobileLink" data-beneficiary-id="<%=data.mobileAddress%>" href="/editMobileBeneficiary">Edit</a></td>
+                                <td><a onclick="DeleteMobileBeneficiary('<%=data.beneficiaryID%>')" >Delete</a></td>
+                                <td><a class="sendMobileLink" data-beneficiary-id="<%=data.mobileAddress%>" href="/sendMobileBeneficiary">Send</a></td>
+                            </tr>
+                            <%  i++; }) %>
+                            <% } else{ %>
+                                <tr>
+                                    <td colspan="7">No Data Found</td>
+                                </tr>
+                            <% } %>
+                        </table>
+					</form>
+				</div>
+			</div>
+
+			<div class="welcome-right" >
+                <div class="top-right">
+
+                </div>
+
+                <div class="bottom-right">
+                    <section class="feature">
+                        <div class="feature-block">
+                            <a href="/dashboard">Dashboard</a>			
+                        </div>
+                    
+                        <div class="feature-block">
+                            <a href="/balance">Balance</a>			
+                        </div>
+
+                        <div class="feature-block">
+                            <a href="/buy">Buy</a>			
+                        </div>
+
+                        <div class="feature-block">
+                            <a href="/sell">Sell</a>			
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    </body >
+
+    <footer>
+        <div class="contact-us">
+            <h3>Contact Us</h3>
+            <p>
+                Tel: +27 67 303 6961
+            </p>
+            <p>
+                Website:  <a href="https://www.bitcoinvendingafrica.com" style="color: white;">https://www.bitcoinvendingafrica.com </a>
+            </p>
+            <p>
+                E-mail: support@bitcoinvendingafrica.com
+            </p>
+        </div>
+
+		<div class="locate-us">
+			<h3>Locate Us</h3>
+            <p>
+                South Africa, Johannesburg
+            </p>
+        </div>
+        <script src="/js/beneficiary.js"></script>
+    </footer>
+</html>

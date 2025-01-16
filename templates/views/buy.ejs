@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Bitcoin Vending Africa</title>
+        <meta name="keywords" content="html, BVA, Bitcoin, ATM, Bitcoin Vending Machine">
+        <link rel="stylesheet" type="text/css" href="css/buyStyles.css">
+        <link rel="icon" href="/img/smallFav.jpg">
+		<script>
+			let myotherNumber = "<%= phoneNumber %>";
+			let myNumber =  myotherNumber.replace(/\+/g, '');
+		</script>
+    </head>
+
+    <body>
+        <header>
+            <div>
+                <a href="/home"><img src="/img/bvaLogo.svg"></a>
+            </div>
+
+            <div class="nav-bar">
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="https://bitcoinvendingafrica.com/about-us-2/">About</a></li>
+                        <li><a href="https://bitcoinvendingafrica.com/contact-us/">Contact</a></li>
+                        <li><a href="">Menu</a>
+                            <ul>
+								<a href="/dashboard">Dashboard</a>
+								<a href="/balance">Balance</a>
+                                <a href="/beneficiary">Beneficary</a>
+								<a href="/buy">Buy</a>
+                                <a href="/sell">Sell</a>
+								<a href="/logout">Logout</a>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <main>
+            <div class="welcome-left">
+                <div>
+                    <hr class="style">
+
+                    <h1>Buy</h1>
+
+					<form class="buyForm">
+
+                        <table class="buyTable">
+                            <tr>
+                                <td>
+                                    <input autocomplete="off" class="inputToken" id="voucherDetail" maxlength="19" placeholder="Voucher Pin" name="voucherDetail" required/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="voucher error"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    	<select name="Currency" id="currencySelect">
+                                            <option value="BTC">Bitcoin</option>
+                                            <option value="USDT">USDT</option>
+                                        </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input autocomplete="off" class="inputPassword" type="password" pattern="[0-9]*" inputmode="numeric"  placeholder="pin number" name="pin" required/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="pin error"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="buy error"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button>Confirm Order</button>
+                                </td>
+                            </tr>
+
+                        </table>
+					</form>
+				</div>
+			</div>
+
+			<div class="welcome-right" >
+                <div class="top-right">
+
+                </div>
+
+                <div class="bottom-right">
+                    <section class="feature">
+                       <div class="feature-block">
+                            <a href="/dashboard">Dashboard</a>			
+                        </div>
+
+                        <div class="feature-block">
+                            <a href="/beneficiary">Beneficary</a>			
+                        </div>
+                    
+                        <div class="feature-block">
+                            <a href="/balance">Balance</a>			
+                        </div>
+
+                        <div class="feature-block">
+                            <a href="/sell">Sell</a>			
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </body>
+
+    <footer>
+        <div class="contact-us">
+            <h3>Contact Us</h3>
+            <p>
+                Tel: +27 67 303 6961
+            </p>
+            <p>
+                Website:  <a href="https://www.bitcoinvendingafrica.com" style="color: white;">https://www.bitcoinvendingafrica.com </a>
+            </p>
+            <p>
+                E-mail: support@bitcoinvendingafrica.com
+            </p>
+        </div>
+
+		<div class="locate-us">
+			<h3>Locate Us</h3>
+            <p>
+                South Africa, Johannesburg
+            </p>
+        </div>
+		<script src="/js/buy.js"></script>
+    </footer>
+</html>

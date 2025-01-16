@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Bitcoin Vending Africa</title>
+        <meta name="keywords" content="html, BVA, Bitcoin, ATM, Bitcoin Vending Machine">
+        <link rel="stylesheet" type="text/css" href="css/sellStyles.css">
+        <link rel="icon" href="/img/smallFav.jpg">
+		<script>
+			let myotherNumber = "<%= phoneNumber %>";
+			let myNumber =  myotherNumber.replace(/\+/g, '');
+		</script>
+    </head>
+
+    <body onload="getBalance()" >
+        <header>
+            <div>
+                <a href="/home"><img src="/img/bvaLogo.svg"></a>
+            </div>
+
+            <div class="nav-bar">
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="https://bitcoinvendingafrica.com/about-us-2/">About</a></li>
+                        <li><a href="https://bitcoinvendingafrica.com/contact-us/">Contact</a></li>
+                        <li><a href="">Menu</a>
+                            <ul>
+								<a href="/dashboard">Dashboard</a>
+								<a href="/balance">Balance</a>
+                                <a href="/beneficiary">Beneficary</a>
+								<a href="/buy">Buy</a>
+                                <a href="/sell">Sell</a>
+								<a href="/logout">Logout</a>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <main>
+            <div class="welcome-left">
+                <div>
+                    <hr class="style">
+
+                    <h1>Sell</h1>
+
+					<form class="sellForm">
+
+                        <table class="sellTable">
+                            <tr>
+                                <td>
+                                    <input autocomplete="off" type="password" pattern="[0-9]*" inputmode="numeric" class="inputPin" placeholder="Pin Number" name="pinNumber" required/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="pin error"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input autocomplete="off" class="inputBTC" type="number" placeholder="BTC amount" name="btcAmount" required/>
+                                </td>
+                                <td>
+                                    <div class="btc zar"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div >
+                                        <input type="range" min="0" max="100" value="0" step="25" class="slider" id="btcRange">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="btcNumber"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button id="btcbtn">BluVoucher: Sell BTC</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input autocomplete="off" class="inputUSDT" type="number" placeholder="USDT amount" name="usdtAmount" required/>
+                                </td>
+                                <td>
+                                    <div class="usdt zar"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <input type="range" min="0" max="100" step="25" value="0" class="slider" id="usdtRange">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="usdtNumber"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button id="usdtbtn">BluVoucher: Sell USDT</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="sell error"></div>
+                                </td>
+                            </tr>                           
+                        </table>
+					</form>
+				</div>
+			</div>
+
+			<div class="welcome-right" >
+                <div class="top-right">
+
+                </div>
+
+                <div class="bottom-right">
+                    <section class="feature">
+                        <div class="feature-block">
+                            <a href="/dashboard">Dashboard</a>			
+                        </div>
+
+                        <div class="feature-block">
+                            <a href="/beneficiary">Beneficary</a>			
+                        </div>
+                    
+                        <div class="feature-block">
+                            <a href="/balance">Balance</a>			
+                        </div>
+
+                        <div class="feature-block">
+                            <a href="/buy">Buy</a>			
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </body>
+
+    <footer>
+        <div class="contact-us">
+            <h3>Contact Us</h3>
+            <p>
+                Tel: +27 67 303 6961
+            </p>
+            <p>
+                Website:  <a href="https://www.bitcoinvendingafrica.com" style="color: white;">https://www.bitcoinvendingafrica.com </a>
+            </p>
+            <p>
+                E-mail: support@bitcoinvendingafrica.com
+            </p>
+        </div>
+
+		<div class="locate-us">
+			<h3>Locate Us</h3>
+            <p>
+                South Africa, Johannesburg
+            </p>
+        </div>
+		<script src="/js/sell.js"></script>
+    </footer>
+</html>
