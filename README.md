@@ -1,52 +1,62 @@
 # Bitcoin Vending Africa (BVA) - Transaction Engine
--------------------------------------------------
-## Tech Stack: 
-            Backend: Express, Node.js
-            Frontend: HTML/CSS
-            CI/CD: version control through Github
-            Deployment: Server and Database is hosted on Azure
 
-            Architecture: Client/Server
-            Design Pattern: Model View Controller (MVC)
--------------------------------------------------
-#### Description
-The full intent of this software is Proof of Concept in a production environment.
-To be used & improved whilst finding investors. 
+#### *Proof of Concept*
+Transaction engine enabling prepiad voucher and cryptocurrency remittance in Africa. This system aims to bridge the informal economy with crypto markets by enabled simple interactions using prepiad vouchers (cash) into Crypto (BTC/USDT).
 
-Once receiving investment:
-- Revamp the UI/UX.
-- Implement better security practices.
-- Modularize and refactor code.
-- Implement new features
+## 🧰 Tech Stack
 
-Better Practices:
-- stored procedures
-- allow open connection for multiple db calls.
-- web3 intergration
-- Modularize, structure code better (reduce nested if-statements) etc..
--------------------------------------------------
-### Core Features:
+| Layer          | Technology              |
+|----------------|--------------------------|
+| **Backend**    | Node.js, Express.js      |
+| **Frontend**   | HTML, CSS                |
+| **CI/CD**      | GitHub (manual)          |
+| **Deployment** | Azure (App + DB)         |
+| **Architecture** | Client/Server         |
+| **Design Pattern** | MVC (Model-View-Controller) |
 
-#### Prepaid Vouchers & Cryptocurrencies
-- Allowing members to use their prepaid vouchers to purchase Bitcoin or USDT.
-- Allowing members to sell their Bitcoin or USDT for prepaid vouchers.
-   
-#### Internal and External Remittance
-- Users can send Bitcoin or USDT to other BVA members.
-- Users can send Bitcoin or USDT to EOA
- 
-#### Notes:
-- We used a Wallet from VALR as the liquidity provider, this is a Web2 instance.
-- Therefore, no Web3 libraries could be used in-order to facilitate external remittance.
-- These would've been steps that we would've taken once funding was achieved.  
--------------------------------------------------
-## Local Usage
-            # Install Dependencies
-            npm install
+## ℹ Project Status
+> ⚠ *This is a Proof of Concept**, testing in a production-like environment.
+> Made to secure funding and investor backing
 
-            # Run Instance
-            npm run dev
+## 🚀 Future Improvements
+- ♾ *UI/UX Revamp* - modern design, responsive UI.
+- 🔐 *Security Enhancements* - input sanitization, JWT/session-based auth, rate limiting, better logging, encryption.
+- 🧱 *Modular Architecture* - reduce nesting, reusable mdules, cleaner separation of concerns.
+- ⚙ *Database Optimization* - stored procedures, enable connection pooling.
+- 🕸 *Web3 Integration* - Enable further interactions, On-chain transactions, and staking protocols.
+- 🛠 *Testing Suite*
 
-            Server File is under 'src'-> 'index.js'
-            
-            *Not operational, as all environmental variables are stored on the server.
+## 🔑 Core Features
+
+### 💳 Prepaid Vouchers & Crypto
+- Buy BTC/USDT with prepaid vouchers.
+- Sell BTC/USDT for prepaid vouchers.
+  
+### ♾ Internal & External Remittance
+- Transfer Crypto to other BVA members (internal).
+- Transfer Crypto to External Wallet Addresses (EOA).
+
+## 💡 Notes
+- *Liquidity Provider:* Used a custodial wallet via [VALR]() (Web2 setup).
+- *Web3 Status:* No blockchain libraries used due to centralzied liquidity provider.
+
+## 🖥 Local Development
+### Clone the repository
+```
+git clone https://github.com/your-username/bitcoin-vending-africa.git
+```
+### Enter repository
+```
+cd bitcoin-vending-africa
+```
+### Install dependencies
+```
+npm install
+```
+### Start development server
+```
+npm run dev
+```
+> 📁Entry Point: ```src/index.js```
+> ⚠ Not fully functional without ```.env``` variables stored on production server
+
